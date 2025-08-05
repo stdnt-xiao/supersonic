@@ -1,5 +1,10 @@
 {
 	"dependencies": {
 		"supersonic-chat-sdk": "link:packages/chat-sdk"
+	},
+	"pnpm": {
+		"overrides": {
+			"supersonic-chat-sdk": "link:packages/chat-sdk"
+		}
 	}
 }

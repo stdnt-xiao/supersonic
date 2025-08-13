@@ -37,7 +37,7 @@ import ControlToolBar from './components/ControlToolBar';
 
 type Props = {};
 
-const SemanticGraph: React.FC<Props> = ({}) => {
+const SemanticGraph: React.FC<Props> = ({ }) => {
   const ref = useRef(null);
   const dataSourceRef = useRef<ISemantic.IDomainSchemaRelaList>([]);
   const [graphData, setGraphData] = useState<TreeGraphData>();
@@ -1009,8 +1009,8 @@ const SemanticGraph: React.FC<Props> = ({}) => {
           const rootGraphData = changeGraphData(dataSourceRef.current);
           refreshGraphData(rootGraphData);
         }}
-        // onZoomIn={() => {}}
-        // onZoomOut={() => {}}
+      // onZoomIn={() => {}}
+      // onZoomOut={() => {}}
       />
 
       <GraphToolBar

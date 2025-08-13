@@ -33,4 +33,10 @@ public class TermDO {
     private Date updatedAt;
 
     private String updatedBy;
+
+    private String entitySemantic;
+
+    private String type;
+
+    private String entityType;
 }

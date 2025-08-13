@@ -359,7 +359,10 @@ CREATE TABLE IF NOT EXISTS s2_term (
     created_at timestamp NOT NULL,
     created_by varchar(100) NOT NULL,
     updated_at timestamp DEFAULT NULL,
-    updated_by varchar(100) DEFAULT NULL
+    updated_by varchar(100) DEFAULT NULL,
+    type varchar(50) DEFAULT NULL,
+    entity_type varchar(50) DEFAULT NULL,
+    entity_semantic varchar(50) DEFAULT NULL
 );
 
 CREATE TABLE IF NOT EXISTS s2_user_token (

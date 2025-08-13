@@ -441,6 +441,8 @@ export declare namespace ISemantic {
     name: string;
     description: string;
     similarTerms: string[];
+    type: 'term' | 'guide' | 'template';
+    entityType: 'dataset' | 'indicator';
   }
 }
 

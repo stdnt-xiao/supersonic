@@ -24,4 +24,10 @@ public class TermReq extends RecordInfo {
     private List<Long> relatedMetrics = Lists.newArrayList();
 
     private List<Long> relateDimensions = Lists.newArrayList();
+
+    private String type;
+
+    private String entityType;
+
+    private String entitySemantic;
 }

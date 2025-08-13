@@ -36,8 +36,12 @@ public class TermController {
     }
 
     @GetMapping
-    public List<TermResp> getTerms(@RequestParam("domainId") Long domainId,
+    public List<TermResp> getTerms(@RequestParam(name = "domainId", required = false) Long domainId,
             @RequestParam(name = "queryKey", required = false) String queryKey) {
+        if (domainId == null) {
+            // 处理domainId为null的情况，例如返回空列表或所有术语
+            return termService.getTerms(null, queryKey);
+        }
         return termService.getTerms(domainId, queryKey);
     }
 

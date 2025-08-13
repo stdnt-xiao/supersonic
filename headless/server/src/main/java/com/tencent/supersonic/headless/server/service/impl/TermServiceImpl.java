@@ -54,7 +54,9 @@ public class TermServiceImpl extends ServiceImpl<TermMapper, TermDO> implements 
     @Override
     public List<TermResp> getTerms(Long domainId, String queryKey) {
         QueryWrapper<TermDO> queryWrapper = new QueryWrapper<>();
-        queryWrapper.lambda().eq(TermDO::getDomainId, domainId);
+        if (domainId != null) {
+            queryWrapper.lambda().eq(TermDO::getDomainId, domainId);
+        }
         if (StringUtils.isNotBlank(queryKey)) {
             queryWrapper.lambda().and(i -> i.like(TermDO::getName, queryKey).or()
                     .like(TermDO::getDescription, queryKey).or().like(TermDO::getAlias, queryKey));

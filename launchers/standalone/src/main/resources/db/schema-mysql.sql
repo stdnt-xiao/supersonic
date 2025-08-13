@@ -527,6 +527,9 @@ CREATE TABLE IF NOT EXISTS `s2_term` (
     `created_by` varchar(100) NOT NULL ,
     `updated_at` datetime DEFAULT NULL ,
     `updated_by` varchar(100) DEFAULT NULL ,
+    `type` varchar(50) DEFAULT NULL ,
+    `entity_type` varchar(50) DEFAULT NULL ,
+    `entity_semantic` varchar(50) DEFAULT NULL ,
     PRIMARY KEY (`id`)
     ) ENGINE = InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT ='术语表';
 

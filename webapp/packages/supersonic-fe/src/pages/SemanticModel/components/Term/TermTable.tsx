@@ -75,6 +75,30 @@ const TermTable: React.FC<Props> = ({}) => {
       search: false,
     },
     {
+      dataIndex: 'type',
+      title: '知识类型',
+      search: false,
+      valueEnum: {
+        term: { text: '术语', status: 'Default' },
+        guide: { text: '指南', status: 'Success' },
+        template: { text: '模版', status: 'Warning' },
+      },
+    },
+    {
+      dataIndex: 'entityType',
+      title: '语义实体类型',
+      search: false,
+      valueEnum: {
+        dataset: { text: '数据集', status: 'Default' },
+        indicator: { text: '指标', status: 'Success' },
+      },
+    },
+    {
+      dataIndex: 'entitySemantic',
+      title: '语义实体',
+      search: false,
+    },
+    {
       dataIndex: 'alias',
       title: '近义词',
       search: false,
@@ -87,7 +111,6 @@ const TermTable: React.FC<Props> = ({}) => {
         );
       },
     },
-
     {
       dataIndex: 'createdBy',
       title: '创建人',

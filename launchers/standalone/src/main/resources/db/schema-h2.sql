@@ -488,6 +488,8 @@ CREATE TABLE IF NOT EXISTS `s2_tag` (
     `created_by` varchar(100) NOT NULL ,
     `updated_at` TIMESTAMP DEFAULT NULL ,
     `updated_by` varchar(100) DEFAULT NULL ,
+    `entity_type` varchar(50) DEFAULT NULL ,
+    `entity_semantic` varchar(50) DEFAULT NULL ,
     PRIMARY KEY (`id`)
     );
 COMMENT ON TABLE s2_tag IS 'tag information';
@@ -533,7 +535,7 @@ CREATE TABLE IF NOT EXISTS `s2_term` (
     `id` INT NOT NULL  AUTO_INCREMENT,
     `domain_id` INT ,
     `name` varchar(255)  NOT NULL ,
-    `description` varchar(500) DEFAULT NULL ,
+    `description` varchar(2000) DEFAULT NULL ,
     `alias` varchar(1000)  NOT NULL ,
     `related_metrics` varchar(1000)  DEFAULT NULL ,
     `related_dimensions` varchar(1000)  DEFAULT NULL,
@@ -541,6 +543,9 @@ CREATE TABLE IF NOT EXISTS `s2_term` (
     `created_by` varchar(100) NOT NULL ,
     `updated_at` TIMESTAMP DEFAULT NULL ,
     `updated_by` varchar(100) DEFAULT NULL ,
+    `type` varchar(50) DEFAULT NULL ,
+    `entity_type` varchar(50) DEFAULT NULL ,
+    `entity_semantic` varchar(255) DEFAULT NULL,
     PRIMARY KEY (`id`)
     );
 COMMENT ON TABLE s2_term IS 'term info';

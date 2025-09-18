@@ -26,7 +26,7 @@ services:
       retries: 5
 
   supersonic_standalone:
-    image: supersonicbi/supersonic:${SUPERSONIC_VERSION:-latest}
+    image: supersonicbi/supersonic:1.0.0-SNAPSHOT
     privileged: true
     container_name: supersonic_standalone
     environment:
@@ -46,6 +46,7 @@ services:
     depends_on:
       supersonic_postgres:
         condition: service_healthy
+    command: ["bash", "-c", "bin/supersonic-daemon.sh restart standalone postgres  && tail -f /dev/null"]
     networks:
       - supersonic_network
     dns:

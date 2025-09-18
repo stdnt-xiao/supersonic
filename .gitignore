@@ -22,3 +22,4 @@ __pycache__/
 assembly/build/*-SNAPSHOT
 **/node_modules/
 benchmark/res/
+docker/supersonic_pg
